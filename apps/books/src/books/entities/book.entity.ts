@@ -13,7 +13,7 @@ export class Book {
     @Column({type:'varchar', length:200, nullable:false})
     authorName:string;
 
-    @Column({type:'int', default:0})
+    @Column({type:'int', nullable:false})
     quantity:number;
 
     @CreateDateColumn({type:'timestamptz', default:()=>'CURRENT_TIMESTAMP'})

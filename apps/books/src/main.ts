@@ -14,13 +14,6 @@ async function bootstrap() {
         }
     );
 
-    app.useGlobalPipes(
-        new ValidationPipe({
-            whitelist:true, //strips unknown properties
-            forbidNonWhitelisted:true, //throws error if extra properties
-            transform:true //auto transform payloads to dto instances
-        })
-    );
     await app.listen();
 }
 bootstrap();
