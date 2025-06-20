@@ -38,7 +38,7 @@ export class BooksService {
 
         const book=await this.findOne(id);
         
-        if (!book) throw new NotFoundException(`Book not found`);
+        if (!book) throw new NotFoundException('Book not found');
 
         const updated=Object.assign(book,updateBookDto);
 
